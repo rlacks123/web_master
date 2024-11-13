@@ -15,4 +15,4 @@
 // }
 // document.write(`1부터 5까지 더하면 ${sum}`);
 
-for (let i = 1; i < 9; i++ ){document.write(`<h3>$`)}
+document.getElementById("demo").innerHTML = "Hello JavaScript";
