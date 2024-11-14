@@ -15,4 +15,12 @@
 // }
 // document.write(`1부터 5까지 더하면 ${sum}`);
 
-for (let i = 1; i < 9; i++ ){document.write(`<h3>$`)}
+// document.getElementById("demo").innerHTML = "Hello JavaScript";
+
+function nameber(num1, num2){
+    let sum = num1 + num2 ;
+    return sum;
+}
+
+let result = nameber(2,3);
+document.write(`두 수를 더한값: ${result}`);
