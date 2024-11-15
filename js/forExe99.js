@@ -15,6 +15,7 @@
 // }
 // document.write(`1부터 5까지 더하면 ${sum}`);
 
+<<<<<<< HEAD
 // document.getElementById("demo").innerHTML = "Hello JavaScript";
 
 function nameber(num1, num2){
@@ -24,3 +25,6 @@ function nameber(num1, num2){
 
 let result = nameber(2,3);
 document.write(`두 수를 더한값: ${result}`);
+=======
+document.getElementById("demo").innerHTML = "Hello JavaScript";
+>>>>>>> 199746250dcbab931fe13b5d3ea4903ee7a0368c
