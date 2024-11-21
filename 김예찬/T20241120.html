@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        #container{
+            width: 850px;
+            height: 450px;
+            margin: 0 auto;
+            /* padding: 10px; */
+            margin: 10px;
+        }
+        body {
+            text-align: center;
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            border: 1px solid seagreen;
+            padding: 8px;
+        }
+        aside {
+            float: right;
+        }
+        tr {
+            background-color: yellow;
+            
+        }
+        td {
+            background-color: white;
+            
+        }
+        th {
+            font-size: 17px;
+        }
+        #box {
+            background-color: rgb(107, 96, 96);
+            color: aliceblue;
+            /* font-size: 17px; */
+        }
+        /* div { 
+            text-align: center;
+            margin: 0 auto;
+        } */
+        aside {
+            text-align: center;
+        }
+        #table1{
+            /* margin:100px; */
+            margin: 10px;
+        }
+        #table2{
+            /* margin:100px; */
+            border: 1px solid blue;
+            padding: 10px;
+            margin: 10px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <hr color="red">
+        <header>
+        <table class="table1">
+            <tr class="yellow">
+                <th>도서코드</th>
+                <td><input type="text" name="bookCode" class="form-control" size="60" </td>
+            </tr>
+            <tr>
+                <th>도서명</th>
+                <td><input type="text" name="bookName" class="form-control" size="60"</td>
+            </tr>
+            <tr>
+                <th>저자</th>
+                <td><input type="text" name="author" class="form-control" size="60"</td>
+            </tr>
+            <tr>
+                <th>출판사</th>
+                <td><input type="text" name="press" class="form-control" size="60"</td>
+            </tr>
+            <tr>
+                <th>금액</th>
+                <td><input type="text" name="price" class="form-control" size="60"</td>
+            </tr>
+        </header>
+         <aside>
+                    <button class="btn btn1">저장</button>
+                    <button class="btn btn2">선택 삭제</button>
+         </aside>   
+        </table>
+
+        <div id="table2">
+            <table class="table3">
+                <thead>
+                    <tr id="box">
+                        <th><input type="checkbox"></th>
+                        <th>도서코드</th>
+                        <th>도서명</th>
+                        <th>저자</th>
+                        <th>출판사</th>
+                        <th>가격</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody id="list"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="/김예찬/js/bookList.js"></script>
+    <script src="/김예찬/js/T20241120.js"></script>
+</body>
+</html>

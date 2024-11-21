@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    font-family: "맑은 고딕";
+}
+#container{
+    width: 1000px;
+    margin: 0 auto;
+}
+header{
+    text-align: center;
+    
+}
+a:hover{
+    background-color: pink;
+    color: black;
+}
+aside{
+    width: 200px;
+    height: 700px;
+    float: left;
+    background-color: gainsboro;
+    text-align: center;
+}
+section{
+    width: 600px;
+    height: 700px;
+    padding: 10px;
+    float: left;
+    text-align: center;
+}
+footer{
+    clear: both;
+    text-align: center;
+    background-color: #ccc;
+    padding: 1px;
+}
+form{
+    width: 500px;
+    background-color: #ccc;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+form fieldset{
+    border: none;
+}
+fieldset legend{
+    font-weight: bold;
+}
+fieldset ul li{
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255,0.5);
+    border: 1px solid #fff;
+    list-style: none;
+    padding:5px;
+    margin: 5px;
+}
+label{
+    width: 130px;
+    float: left;
+}
+input{
+    width: 250px;
+    padding: 3px;
+}
+button{
+    width: 150px;
+    border-radius: 30px;
+    background-color: #ddd;
+    padding: 15px;
+    border: none;
+}
+nav{
+    background-color: black;
+    overflow: hidden;
+}
+nav ul{
+    display: flex;
+    padding: 5px;
+    margin: 0;
+    list-style: none;
+
+}
+nav ul li:last-child{
+    margin-left: auto;
+} 
+a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}

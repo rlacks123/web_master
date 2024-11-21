@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호</title>
+    <style>
+        #container {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #lotto {
+            background: rgb(139, 207, 206);
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            border-radius: 20px;
+            font-weight: bold;
+            padding: 15px 20px;
+            background: rgb(163, 202, 188);
+            cursor: pointer;
+        }
+
+        span {
+            display: inline-block;
+            margin: 5px;
+            border: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>로또 번호 발생기</h1>
+        <button type="button" id="btn">클릭</button>
+        <div id="lotto"><span>23</span><span>33</span></div>
+    </div>
+    <script>
+        // // 1. buttin클릭하는 이벤트
+        document.querySelector('#btn').addEventListener('cilck', (e) => {
+            let ary = generateNumber(); // 번호 6개 생성.
+            let str = '';
+            for (let i = 0; i < ary.length; i++) {
+                str += '<span>' + ary[i] + '</span>';
+
+                document.querySelector('#lotto').innerHTML = str;
+            }
+
+        })
+
+        // 2. function generateNumber() => 1~45까지의 임의의 수를 6개 배열저장.
+
+        function generateNumber() {
+            let numAry = [];
+            for (let i = 0; i < 6;) {
+                let temp = parseInt(Math.random() * 45) + 1; // 1~45 임의의수 생성
+                if (dupValueCheck(numAry, temp) == -1) {
+                    numAry[i] = temp;
+                    i++; // 추가할 경우에만 i를 증가.
+                }
+            }
+            return numAry; // 생성한 배열을 반환.
+        }
+
+        // 3.중복값 체크하는 함수.
+        function dupValueCheck(ary = [], checkNum = 10) {
+            // 배열안, 값 체크기능.
+            // 배열에 찾는 값이 있으면 인덱스값을 반환, 없으면 -1 을 반환.
+            for (let i = 0; i < ary.length; i++) {
+                if (ary[i] == checkNum) { // 찾는 값이 있다는 의미.
+                    return 1;
+                }
+            }
+            return -1; // 찾는 값이 없다는 의미.
+        }
+
+        let tempAry = [20, 45, 30, 17]
+        let num = 45;
+        console.log(dupValueCheck(tempAry, num)); // 밸류 체크 중복값 체크
+
+
+
+        btn.onclick = function () {
+            let ary = generateNumber();
+
+            let str = '';
+            for (let i = 0; i < ary.length; i++) {
+                str += '<span>' + ary[i] + '</span>';
+            }
+            lotto.innerHTML = str;
+        }
+
+        // function generateNumber () {
+        //     let result = [];
+        //     for (let i=0; i < 6; i++) {
+        //         let temp = parseInt(Math.random() * 45 ) +1 // 1~45 임의의수 생성
+        //         result.push(temp);
+        //     } 
+        //     return result; // 생성한 배열을 반환.
+        // }
+    </script>
+</body>
+
+</html>

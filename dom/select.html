@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select.html</title>
+    <style>
+        #container {
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+        }
+        #container span{
+            display: inline-block;
+            font-size: large;
+            width: 110px;
+            margin: 2px;
+            padding: 1px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    입력: <input type="text" id="userValue">
+    <button id="deleteWord">삭제</button>
+
+    <div id="container">
+        <span>Dolor</span><span>Ipsum</span>
+    </div>
+
+    <script> 
+    let str = 
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iste quam asperiores accusamus sed voluptatem reiciendis? Non quaerat cumque amet dolorem repellendus dolores eius omnis, quas quae culpa maxime enim.'
+    let strAry = str.split(' ');
+    str = '';
+    strAry.forEach(word => {
+        // console.log(word);
+        // str +='<span>' + word + '</span>';
+        let span = document.createElement('span');
+        span.innerText = word;
+        document.querySelector('#container').appendChild(span);
+    })
+    // document.querySelector('#container').innerHTML = str
+
+    // 1. 클릭이벤트 등록.
+    document.querySelector('#deleteWord').addEventListener('click', e => {
+          console.log('클릭');
+    // 2. span요소전채를 대상으로 반복문.
+    // 3. span의 innerText와 사용자의 입력값을 비교해서 같으면 remove();
+      let userValue = document.querySelector('#userValue').value;
+      document.querySelectorAll('#container span').forEach(item => {
+        if (item.innerText == userValue) {
+            item.remove();
+        }
+      })
+    // 입력값 초기화.
+    document.querySelector('#userValue').value = ' ';
+    });
+
+
+    </script>
+</body>
+</html>
