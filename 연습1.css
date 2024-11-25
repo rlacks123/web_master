@@ -1,10 +1,17 @@
+/* html {
+    border-color: black
+} */
+
 * {
     box-sizing: border-box;
     font-family: "맑은 고딕";
+    /* border-color: black */
 }
 #container{
     width: 1000px;
     margin: 0 auto;
+    /* border-color: black */
+
 }
 header{
     text-align: center;

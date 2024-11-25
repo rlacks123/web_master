@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+        fieldset {
+            padding: 20px;
+            margin: 20px;
+        }
+        label {
+            width: 130px;
+            float: left;
+            /* text-decoration: none; */
+
+        }
+
+        legend {
+            text-align: center;
+        }
+
+        input {
+            width: 250px;
+            padding: 3px;
+        }
+        #btn {
+            text-align: center;
+        }
+        button {
+            width: 150px;
+            border-radius: 30px;
+            background-color: #ddd;
+            padding: 15px;
+            border: none;
+            /* text-align: center; */
+        }
+
+        li {
+            list-style-type: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <form name="order">
+            <fieldset>
+                <legend>주문 정보</legend>
+                <ul>
+                    <li>
+                        <label class="field" for="billingName">이름: </label>
+                        <input type="text" class="input-box" id="billingName" name="billingName">
+                    </li>
+                    <li>
+                        <label class="field" for="billingTel">연락처: </label>
+                        <input type="text" class="input-box" id="billingTel" name="billingTel">
+                    </li>
+
+                    <li>
+                        <label class="field" for="billingAddr">주소: </label>
+                        <input type="text" class="input-box" id="billingAddr" name="billingAddr">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        <form name="ship">
+            <fieldset>
+                <legend>배송 정보</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="shippingInfo" name="shippingInfo">
+                        <label for="bill_info" class="check">주문정보불러오기</label>
+                    </li>
+                    <li>
+                        <label class="field" for="shippingName">이름: </label>
+                        <input type="text" class="input-box" id="shippingName" name="shippingName">
+                    </li>
+                    <li>
+                        <label class="field" for="shippingTel">연락처: </label>
+                        <input type="text" class="input-box" id="shippingTel" name="shippingTel">
+                    </li>
+
+                    <li>
+                        <label class="field" for="shippingAddr">주소: </label>
+                        <input type="text" class="input-box" id="shippingAddr" name="shippingAddr">
+                    </li>
+                </ul>
+            </fieldset>
+            <div id="btn">
+                <button type="submit" class="order">결제하기</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/빵집/js/shipment.js"></script>
+
+</body>
+
+</html>
