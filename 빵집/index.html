@@ -9,7 +9,7 @@
         body {
             background-color: rgb(143, 71, 33);
             height: 800px;
-
+            /* background-size : 100% 100%; */
         }
 
         body img {
@@ -47,6 +47,10 @@
         nav ul li:last-child {
             margin-left: auto;
         }
+        #gg {
+            color: #fff;
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -54,6 +58,7 @@
 <body background="/빵집/images/bread1.jpg">
 
     <dvi id="consectetur">
+        <!-- <h1 id="gg"> 맛나 베이커리에 오신걸 환영합니다</h1> -->
         <thead>
             <nav>
                 <ul>
@@ -61,8 +66,7 @@
                 </ul>
             </nav>
         </thead>
-        <!-- <img src="/빵집/images/carousel-1.jpg" alt=""> -->
-        <!-- <img src="/빵집/images/bread1.jpg" alt=""> -->
+
 
     </dvi>
 
@@ -76,7 +80,7 @@
         localStorage.setItem('cartData', JSON.stringify(cartData));
         // 로컬스토리지 셋아이템으로 데이터를 저장한걸 제이슨.스트링어파이로 문자열로 바꿈
 
-        localStorage.setItem('결제진행' , JSON.stringify());
+        localStorage.setItem('결제진행' , JSON.stringify(paymentData));
     </script>
 
 </body>

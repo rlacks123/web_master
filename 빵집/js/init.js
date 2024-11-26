@@ -60,6 +60,43 @@ const productData = [{
     price: 2500,
     image: 'Sarada.jpg'
 },
+{
+    pcode: 'P007',
+    pname: '소보루빵',
+    price: 2000,
+    image: '소보루.jpg'
+},
+{
+    pcode: 'P008',
+    pname: '소금빵',
+    price: 2000,
+    image: '소금빵.jpg'
+},
+{
+    pcode: 'P009',
+    pname: '맘모스빵',
+    price: 3500,
+    image: '맘모스빵.jpg'
+},
+{
+    pcode: 'P0010',
+    pname: '통밀빵',
+    price: 3500,
+    image: '통밀빵.jpg'
+},
+{
+    pcode: 'P0011',
+    pname: '마늘빵',
+    price: 2500,
+    image: '마늘빵.jpg'
+},
+{
+    pcode: 'P0012',
+    pname: '커피',
+    price: 2500,
+    image: '커피.jpg'
+}
+
 ]
 
 // id, pcode, qty 장바구니 데이터
@@ -95,14 +132,23 @@ const cartData = [{
 }
 ]
 
+//
+// const paymentData = [{
+//     id: 'user01',
+//     pw: '1111',
+//     pcode: 'P003',
+//     qty: 2
+// }]
+
+
 // 객체의 정보를 활용해서 row 생성.
 function makeRow(obj = {}) {
-    let tr = document.createElement('tr');
-    for (let prop in obj) {
-      let td = document.createElement('td');
-      td.innerHTML = obj[prop];
-      tr.appendChild(td);
-    }
+let tr = document.createElement('tr');
+for (let prop in obj) {
+    let td = document.createElement('td');
+    td.innerHTML = obj[prop];
+    tr.appendChild(td);
+}
 
-    return tr;
-  }
+return tr;
+}

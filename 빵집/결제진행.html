@@ -5,42 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Myeongjo&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 
     <style>
+        * {
+            font-family: "Nanum Myeongjo", serif;
+        }
+
         #container {
-            width: 800px;
+            width: 750px;
             margin: 0 auto;
             padding: 50px;
         }
+
         fieldset {
             padding: 20px;
             margin: 20px;
+            border-radius: 50px;
         }
+
         label {
             width: 130px;
             float: left;
-            /* text-decoration: none; */
-
+            font-size: 20px;
         }
 
         legend {
             text-align: center;
+            font-size: 25px;
+            color: rgb(245, 255, 201);
+
         }
 
         input {
             width: 250px;
             padding: 3px;
         }
+
         #btn {
             text-align: center;
         }
+
         button {
             width: 150px;
             border-radius: 30px;
-            background-color: #ddd;
+            background-color: #aaa4df;
             padding: 15px;
             border: none;
-            /* text-align: center; */
+            font-size: 20px;
+        }
+
+        body {
+            background-size: 100%;
         }
 
         li {
@@ -50,56 +68,78 @@
 
 </head>
 
-<body>
+<body background="/빵집/images/배경.jpg">
     <div id="container">
         <form name="order">
             <fieldset>
-                <legend>주문 정보</legend>
+                <legend><b>주문 정보</b></legend>
                 <ul>
                     <li>
-                        <label class="field" for="billingName">이름: </label>
-                        <input type="text" class="input-box" id="billingName" name="billingName">
+                        <label class="field" for="idName">이름: </label>
+                        <input type="text" class="input-box" id="idName" name="idName">
                     </li>
                     <li>
-                        <label class="field" for="billingTel">연락처: </label>
-                        <input type="text" class="input-box" id="billingTel" name="billingTel">
+                        <label class="field" for="idTel">연락처: </label>
+                        <input type="text" class="input-box" id="idTel" name="idTel">
                     </li>
 
                     <li>
-                        <label class="field" for="billingAddr">주소: </label>
-                        <input type="text" class="input-box" id="billingAddr" name="billingAddr">
+                        <label class="field" for="idAddr">주소: </label>
+                        <input type="text" class="input-box" id="idAddr" name="idAddr">
                     </li>
                 </ul>
             </fieldset>
         </form>
         <form name="ship">
             <fieldset>
-                <legend>배송 정보</legend>
+                <legend><b>배송 정보</b></legend>
                 <ul>
                     <li>
-                        <input type="checkbox" id="shippingInfo" name="shippingInfo">
-                        <label for="bill_info" class="check">주문정보불러오기</label>
+                        <input type="checkbox" id="checkboxx" name="checkboxx">
+                        <!-- <label for="bill_info" class="check">주문정보불러오기</label> -->
                     </li>
                     <li>
-                        <label class="field" for="shippingName">이름: </label>
-                        <input type="text" class="input-box" id="shippingName" name="shippingName">
+                        <label class="field" for="chName">이름: </label>
+                        <input type="text" class="input-box" id="chName" name="chName">
                     </li>
                     <li>
-                        <label class="field" for="shippingTel">연락처: </label>
-                        <input type="text" class="input-box" id="shippingTel" name="shippingTel">
+                        <label class="field" for="chTel">연락처: </label>
+                        <input type="text" class="input-box" id="chTel" name="chTel">
                     </li>
 
                     <li>
                         <label class="field" for="shippingAddr">주소: </label>
-                        <input type="text" class="input-box" id="shippingAddr" name="shippingAddr">
+                        <input type="text" class="input-box" id="chAddr" name="chAddr">
                     </li>
                 </ul>
             </fieldset>
             <div id="btn">
-                <button type="submit" class="order">결제하기</button>
+                <button class="btn btn-success">결제하기</button>
+
             </div>
         </form>
     </div>
+
+    <script>
+
+        // const paymentData = JSON.parse(localStorage.getItem('paymentData'))
+
+        // document.querySelector('button.btn-success').addEventListener('click', (e) => {
+        //     let name = document.querySelector('#chName').value;
+        //     let tel = document.querySelector('#chtel').value;
+        //     let addr = document.querySelector('#chAddr').value;
+
+        //     // let loginInfo = paymentData.fliter(payment => payment.id == id && payment.pw == pw);
+        //     if(loginInfo.length) {
+        //         location.href = 'welcome.html';
+        //     } else {
+        //         alert('입력정보를 확인하세요');
+        //     }
+        // })
+
+        localStorage.setItem('이름', JSON.stringify(cart.html))
+
+    </script>
 
     <script src="/빵집/js/shipment.js"></script>
 

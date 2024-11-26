@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+
+    <style>
+        #container {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        legend {
+            text-align: center;
+            font-weight: bold;
+
+        }
+
+        fieldset ul li {
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255, 0.5);
+            border: 1px solid #fff;
+            list-style: none;
+            padding: 5px;
+            margin: 5px;
+        }
+        #btn {
+            text-align: center;
+        }
+
+        label {
+            width: 130px;
+            float: left;
+        }
+
+        button {
+            width: 150px;
+            border-radius: 30px;
+            background-color: #bdfc89;
+            padding: 10px;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body background="/빵집/images/">
+
+    <div id="container">
+        <form>
+            <fieldset>
+                <legend>회원가입하기</legend>
+                <ul>
+                    <li>
+                        <label for="id">아이디</label>
+                        <input type="text" name="uid" id="uid" placeholder="아이디를 입력해주세요">
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label for="pw">비밀번호</label>
+                        <input type="text" name="upw" id="upw" placeholder="비밀번호를 입력해주세요">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset id="btn">
+                <button type="button" class="btn btn-success">회원가입</button>
+            </fieldset>
+        </form>
+
+        <script>
+            // let hoewon = JSON.parse(localStorage.hoewon);
+            // hoewon.push({아이디:아이디,비밀번호:비밀번호});
+            // localStorage.hoewon = JSON.stringify(hoewon)
+            // console.log(hoewon);
+
+            document.querySelector('button.btn.btn-success').addEventListener('click', (e) => {
+                let hoewon = JSON.parse(localStorage.hoewon);
+                hoewon.push({
+                    uid: uid.value,
+                    upw: upw.value
+                });
+                localStorage.hoewon = JSON.stringify(hoewon)
+            })
+        </script>
+
+    </div>
+
+</body>
+
+</html>
